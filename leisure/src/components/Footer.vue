@@ -6,13 +6,13 @@
       <div class="row">
         <div class="col-lg-5 col-md-12 p-r-5">
           <br>
-          <p><img src="img/ALT1-02.png" width="350" height="130" data-retina="true" alt=""></p>
+          <p><img src="img/ALT1-02.png" width="300" height="110" data-retina="true" alt=""></p>
 
 
         </div>
         <div class="col-lg-3 col-md-6 ml-lg-auto">
           <h5>Useful links</h5>
-          <ul class="links">
+          <ul >
             <li><a href="about.html">About</a></li>
             <!-- <li><a href="blog.html">News &amp; Events</a></li> -->
             <li><a href="media-gallery.html">Galery</a></li>
@@ -28,7 +28,7 @@
             <li>
               <div class="follow_us">
                 <ul>
-                  <li>Follow us</li>
+                  <li>Follow us</li> <br>
                   <li><a href="#0"><i class="ti-facebook"></i></a></li>
                   <li><a href="#0"><i class="ti-twitter-alt"></i></a></li>
                   <li><a href="#0"><i class="ti-instagram"></i></a></li>
@@ -99,18 +99,21 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+
+.margin_60_35 {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+ul, ol {
+  list-style: none !important;
+  margin: 0 0 0px 0 !important;
+  padding: 0  !important;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+
+hr {
+    margin: 10px 0 10px 0 !important;
+    border-color: #ededed !important;
 }
-a {
-  color: #42b983;
-}
+
 </style>

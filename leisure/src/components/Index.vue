@@ -4,11 +4,11 @@
     <main>
 
 		<section class="hero_single version_2">
+
 			<div class="wrapper">
 				<div class="container">
 					<h3>Book your transportation now</h3>
-					<p>Reserve your service transportation </p>
-					<form>
+					<!-- <form>
 						<div class="row no-gutters custom-search-input-2">
 							<div class="col-lg-4">
 								<div class="form-group">
@@ -26,7 +26,6 @@
 								<div class="panel-dropdown">
 									<a href="#">Guests <span class="qtyTotal">1</span></a>
 									<div class="panel-dropdown-content">
-										<!-- Quantity Buttons -->
 										<div class="qtyButtons">
 											<label>Adults</label>
 											<input type="text" name="qtyInput" value="1">
@@ -42,98 +41,115 @@
 								<input type="submit" class="btn_search" value="Search">
 							</div>
 						</div>
-						<!-- /row -->
-					</form>
+					</form> -->
 				</div>
+        <div class="container">
+          <form>
+						<div class="row no-gutters custom-search-input-2">
+							<div class="col-lg-4">
+                <model-select class="form-control" :options="options"
+                                       v-model="item"
+                                       placeholder="Hotel">
+                </model-select>
+              </div>
+							<div class="col-lg-3">
+                <Datepicker :clear-button="true" style="width:100%;" placeholder="Date"></Datepicker>
+              </div>
+							<div class="col-lg-3">
+                <input type="text" class="form-control" placeholder="People">
+              </div>
+              <div class="col-lg-2">
+                <input type="submit" class="btn_search" value="Search">
+              </div>
+            </div>
+          </form>
+
+
+
+
+
+        </div>
 			</div>
 		</section>
 		<!-- /hero_single -->
 
-
-		<div class="container-fluid margin_80_0">
-			<div class="main_title_2">
-				<span><em></em></span>
-				<h2>Private Airport Transfers</h2>
-				<p>Most visited places in Riviera Maya</p>
-			</div>
-			<div id="reccomended" class="owl-carousel owl-theme">
-				<div class="item">
-					<div class="box_grid">
-						<figure>
-							<a href="#0" class="wish_bt"></a>
-							<a href="tour-detail.html"><img src="img/tour_1.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
-						</figure>
-						<div class="wrapper">
-							<h3><a href="tour-detail.html">Cancun</a></h3>
-							<p>Beautiful white sand beaches with fine and soft grains; crystal clear waters of brilliant turquoise and emerald colors.</p>
-							<span class="price">From <strong>$35</strong> /per van</span>
-						</div>
-
+    <div class="bg_color_1">
+			<div class="container margin_60_35">
+				<div class="row">
+					<div class="col-md-4">
+						<a href="#0" class="boxed_list">
+							<i class="pe-7s-help2"></i>
+							<h4>Need Help? Contact us</h4>
+							<p>Cum appareat maiestatis interpretaris et, et sit.</p>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="#0" class="boxed_list">
+							<i class="pe-7s-wallet"></i>
+							<h4>Payments and Refunds</h4>
+							<p>Qui ea nemore eruditi, magna prima possit eu mei.</p>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="#0" class="boxed_list">
+							<i class="pe-7s-note2"></i>
+							<h4>Quality Standards</h4>
+							<p>Hinc vituperata sed ut, pro laudem nonumes ex.</p>
+						</a>
 					</div>
 				</div>
-				<!-- /item -->
-				<div class="item">
-					<div class="box_grid">
-						<figure>
-							<a href="#0" class="wish_bt"></a>
-							<a href="tour-detail.html"><img src="img/tour_2.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
-						</figure>
-						<div class="wrapper">
-							<h3><a href="tour-detail.html">Playa del Carmen</a></h3>
-							<p>Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.</p>
-							<span class="price">From <strong>$90</strong> /per van</span>
-						</div>
-						<!-- <ul>
-							<li><i class="icon_clock_alt"></i> 1h 30min</li>
-							<li><div class="score"><span>Good<em>350 Reviews</em></span><strong>7.0</strong></div></li>
-						</ul> -->
-					</div>
-				</div>
-				<!-- /item -->
-				<div class="item">
-					<div class="box_grid">
-						<figure>
-							<a href="#0" class="wish_bt"></a>
-							<a href="tour-detail.html"><img src="img/tour_3.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
-						</figure>
-						<div class="wrapper">
-							<h3><a href="tour-detail.html">Puerto Morelos</a></h3>
-							<span class="price">From <strong>$60</strong> /per van</span>
-						</div>
-					<!-- 	<ul>
-							<li><i class="icon_clock_alt"></i> 1h 30min</li>
-							<li><div class="score"><span>Good<em>350 Reviews</em></span><strong>7.0</strong></div></li>
-						</ul> -->
-					</div>
-				</div>
-
-				<!-- /item -->
-				<div class="item">
-					<div class="box_grid">
-						<figure>
-							<a href="#0" class="wish_bt"></a>
-							<a href="tour-detail.html"><img src="img/tour_5.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
-						</figure>
-						<div class="wrapper">
-							<h3><a href="tour-detail.html">Tulum</a></h3>
-							<span class="price">From <strong>$140</strong> /per van</span>
-						</div>
-					<!-- 	<ul>
-							<li><i class="icon_clock_alt"></i> 1h 30min</li>
-							<li><div class="score"><span>Good<em>350 Reviews</em></span><strong>7.5</strong></div></li>
-						</ul> -->
-					</div>
-				</div>
-				<!-- /item -->
-			</div>
-			<!-- /carousel -->
-			<div class="container">
-				<p class="btn_home_align"><a href="tours-grid-isotope.html" class="btn_1 rounded">View more Airport Transfers</a></p>
+				<!-- /row -->
 			</div>
 			<!-- /container -->
-			<hr class="large">
 		</div>
-		<!-- /container -->
+
+		<div class="container-fluid pl-lg-5 pr-lg-5">
+      <section>
+        <div class="main_title_3">
+          <span><em></em></span>
+          <h2>Popular Transportation </h2>
+          <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+        </div>
+
+
+        <div class="container margin_60_35">
+
+          <div class="wrapper-grid">
+            <div class="row">
+              <div v-for="(place, key) in popularDestination" :key="key" class="col-xl-4 col-lg-6 col-md-6">
+                <div class="box_grid">
+                  <figure>
+                    <a href="tour-detail.html"><img src="img/tour_1.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
+                    <small>Historic</small>
+                  </figure>
+                  <div class="wrapper">
+                    <h3><a href="tour-detail.html"> {{place.Nombre }}</a></h3>
+                    <p>{{place.Descripcion}}</p>
+                    <span class="price">From <strong>${{place.Price}}</strong> /per person</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /row -->
+          </div>
+          <!-- /wrapper-grid -->
+
+          <p class="text-center"><a href="#0" class="btn_1 rounded add_top_30">Load more</a></p>
+
+        </div>
+        <!-- /container -->
+      </section>
+
+
+    </div>
+
+    <!-- AQUI PONEMOS DATOS DE TRIPADVISOR O VIDEOS DE YOUTUBE PARA MOSTRAR-->
+    <div class="container-fluid margin_30_95 pl-lg-5 pr-lg-5">
+			<section>
+        <h2>aqui va los contactos de tripadvisor </h2>
+      </section>
+    </div>
+
 
 		<div class="container-fluid margin_30_95 pl-lg-5 pr-lg-5">
 			<section>
@@ -143,80 +159,17 @@
 					<p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
 				</div>
 				<div class="row">
-					<div class="col-xl-3 col-lg-6 col-md-6">
+					<div v-for="(place,key) in popularTours" :key="key" class="col-xl-3 col-lg-6 col-md-6">
 						<a href="restaurant-detail.html" class="grid_item">
 							<figure>
 								<img src="img/restaurant_1.jpg" class="img-fluid" alt="">
 								<div class="info">
-									<h3>Chichen Itza</h3>
+									<h3>{{place.Nombre}}</h3>
 								</div>
 							</figure>
+
 						</a>
 					</div>
-					<div class="col-xl-3 col-lg-6 col-md-6">
-						<a href="restaurant-detail.html" class="grid_item">
-							<figure>
-								<img src="img/restaurant_1.jpg" class="img-fluid" alt="">
-								<div class="info">
-									<h3>Coba</h3>
-								</div>
-							</figure>
-						</a>
-					</div>
-					<div class="col-xl-3 col-lg-6 col-md-6">
-						<a href="restaurant-detail.html" class="grid_item">
-							<figure>
-								<img src="img/restaurant_1.jpg" class="img-fluid" alt="">
-								<div class="info">
-									<h3>El rey</h3>
-								</div>
-							</figure>
-						</a>
-					</div>
-					<div class="col-xl-3 col-lg-6 col-md-6">
-						<a href="restaurant-detail.html" class="grid_item">
-							<figure>
-								<img src="img/restaurant_1.jpg" class="img-fluid" alt="">
-								<div class="info">
-									<h3>Ek Balam</h3>
-								</div>
-							</figure>
-						</a>
-					</div>
-					<!-- /grid_item -->
-					<div class="col-xl-3 col-lg-6 col-md-6">
-						<a href="restaurant-detail.html" class="grid_item">
-							<figure>
-								<img src="img/restaurant_2.jpg" class="img-fluid" alt="">
-								<div class="info">
-									<h3>Tulum & Coba</h3>
-								</div>
-							</figure>
-						</a>
-					</div>
-					<!-- /grid_item -->
-					<div class="col-xl-3 col-lg-6 col-md-6">
-						<a href="restaurant-detail.html" class="grid_item">
-							<figure>
-								<img src="img/restaurant_3.jpg" class="img-fluid" alt="">
-								<div class="info">
-									<h3>Tulum & Xcaret</h3>
-								</div>
-							</figure>
-						</a>
-					</div>
-					<!-- /grid_item -->
-					<div class="col-xl-3 col-lg-6 col-md-6">
-						<a href="restaurant-detail.html" class="grid_item">
-							<figure>
-								<img src="img/restaurant_4.jpg" class="img-fluid" alt="">
-								<div class="info">
-									<h3>Tulum & Xelha</h3>
-								</div>
-							</figure>
-						</a>
-					</div>
-					<!-- /grid_item -->
 				</div>
 				<!-- /row -->
 				<a href="restaurants-grid-isotope.html"><strong>View more Tours  <i class="arrow_carrot-right"></i></strong></a>
@@ -230,11 +183,105 @@
   </div>
 </template>
 
+<script src="js/input_qty.js"></script>
+
+
 <script>
+import 'vue-search-select/dist/VueSearchSelect.css'
+import { ModelSelect } from 'vue-search-select'
+import Datepicker from 'vuejs-datepicker';
+import VueNumberInput from '@chenfengyuan/vue-number-input';
+
+
 export default {
   name: 'HelloWorld',
+  components: {
+    ModelSelect,
+    Datepicker
+  },
   props: {
     msg: String
+  },
+  data () {
+    return {
+      item: '',
+      options: [
+        { value: '1', text: 'Grand Oasis - Cancun' },
+        { value: '2', text: 'Riu Palace - Cancun' },
+        { value: '3', text: 'The Ritz Carlton - Cancun' },
+        { value: '4', text: 'Krystal - Cancun' },
+        { value: '5', text: 'Temptation - Cancun' }
+      ],
+      popularDestination: [{
+        Id: 1,
+        Nombre:'Aeropuerto',
+        Descripcion: 'Aeropuerto internacional de cancun',
+        Img: '001',
+        Price: 35,
+        Link: 'Hotel'
+      },
+      {
+        Id: 2,
+        Nombre: 'Playa del carmen',
+        Descripcion: 'Playa del carmen descripcion',
+        Img: '002',
+        Price: 30,
+        Link: 'Hotel'
+      },
+      {
+        Id: 3,
+        Nombre: 'Tulum',
+        Descripcion: 'la ciudad de tuluum que esta bien bonita',
+        Img: '003',
+        Price: 80,
+        Link: 'City'
+      }],
+      popularTours: [{
+        Id: 1,
+        Nombre: 'Tulum',
+        Img: '001'
+      },{
+        Id: 2,
+        Nombre: 'Chichen Itza',
+        Img: '002'
+      },{
+        Id: 3,
+        Nombre: 'Coba',
+        Img: '003'
+      },{
+        Id: 4,
+        Nombre: 'Xplor',
+        Img: '004'
+      }]
+    }
+  },
+  mounted() {
+
+    let recaptchaScript = document.createElement('script')
+    recaptchaScript.setAttribute('src', '@/assets/js/common_scripts.js')
+    document.head.appendChild(recaptchaScript)
+  },
+  methods: {
+
   }
+
 }
 </script>
+
+<style scoped>
+  .custom-search-input-2 input {
+    width: 100% !important;
+  }
+
+  .ui fluid search selection dropdown form-control {
+    height: 100% !important;
+  }
+
+  .ui.selection.dropdown {
+    height: 100% !important;
+  }
+
+  .vdp-datepicker__calendar {
+    color:black;
+  }
+</style>

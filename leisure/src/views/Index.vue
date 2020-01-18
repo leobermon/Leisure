@@ -1,7 +1,7 @@
 <template>
   <div class="index">
     <Header/>
-      <About/>
+      <Index/>
     <Footer/>
   </div>
 </template>
@@ -11,14 +11,14 @@
 
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
-import About from '@/components/About.vue'
+import Index from '@/components/Index.vue'
 
 export default {
   name: 'index',
   components: {
     Header,
     Footer,
-    About
+    Index
 
   }
 }

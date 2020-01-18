@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <main>
-		
+
 		<section class="hero_in general">
 			<div class="wrapper">
 				<div class="container">

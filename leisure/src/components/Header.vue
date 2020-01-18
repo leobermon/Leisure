@@ -2,10 +2,9 @@
   <div class="hello">
 
     <header class="header menu_fixed">
-		<div id="preloader"><div data-loader="circle-side"></div></div><!-- /Page Preload -->
 		<div id="logo">
-			<a href="index.html">
-				<img src="img/ALT-Nombre.png" width="340" height="120" data-retina="true" alt="" class="logo_normal">
+			<a href="/">
+				<img src="img/ALT-Nombre.png" width="280" height="90" data-retina="true" alt="" class="logo_normal">
 				<img src="img/ALT-Nombre.png" width="170" height="60" data-retina="true" alt="" class="logo_sticky">
 			</a>
 		</div>
@@ -20,16 +19,16 @@
 			<ul>
 
 				<li>
-					<span><a href="index.html">Home</a></span>
+					<span><a style="cursor: pointer;" @click="changeRoute('/')" >Home</a></span>
 				</li>
 				<li>
-					<span><a href="about.html">About</a></span>
+					<span><a style="cursor: pointer;" @click="changeRoute('/About')" >About</a></span>
 				</li>
 				<li>
-					<span><a href="contacts.html">Contact us</a></span>
+					<span><a style="cursor: pointer;" @click="changeRoute('/Contact')" >Contact us</a></span>
 				</li>
 				<li>
-					<span><a href="tours-grid-isotope.html">Tours</a></span>
+					<span><a style="cursor: pointer;" @click="changeRoute('/Tours')" >Tours</a></span>
 				</li>
 
 			</ul>
@@ -45,6 +44,11 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  methods: {
+    changeRoute (ruta) {
+      this.$router.push(ruta)
+    }
   }
 }
 </script>

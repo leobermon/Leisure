@@ -1,13 +1,8 @@
 <template>
-  <div class="home">
-
+  <div class="index">
     <Header/>
-
-    <Index/>
-
-
+      <Contact/>
     <Footer/>
-
   </div>
 </template>
 
@@ -16,14 +11,14 @@
 
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
-import Index from '@/components/Index.vue'
+import Contact from '@/components/Contact.vue'
 
 export default {
-  name: 'home',
+  name: 'index',
   components: {
     Header,
     Footer,
-    Index
+    Contact
 
   }
 }
