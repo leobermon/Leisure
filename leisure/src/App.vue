@@ -7,7 +7,21 @@
 <script>
   // @ is an alias to /src
 
+
   export default {
+    data () {
+      return {
+        contentIs: this.isNotMainRoute()
+      }
+    },
+    created(){
+  
+    },
+    methods: {
+      isNotMainRoute () { // revisamos si esta en el route, index
+        return this.$router.history.current["path"] == "/";
+      }
+    }
 
   }
 

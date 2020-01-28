@@ -1,78 +1,6 @@
 <template>
   <div class="hello">
-
     <main>
-
-		<section class="hero_single version_2">
-
-			<div class="wrapper">
-				<div class="container">
-					<h3>Book your transportation now</h3>
-					<!-- <form>
-						<div class="row no-gutters custom-search-input-2">
-							<div class="col-lg-4">
-								<div class="form-group">
-									<input class="form-control" type="text" placeholder="Hotel, City...">
-									<i class="icon_pin_alt"></i>
-								</div>
-							</div>
-							<div class="col-lg-3">
-								<div class="form-group">
-									<input class="form-control" type="text" name="dates" placeholder="When..">
-									<i class="icon_calendar"></i>
-								</div>
-							</div>
-							<div class="col-lg-3">
-								<div class="panel-dropdown">
-									<a href="#">Guests <span class="qtyTotal">1</span></a>
-									<div class="panel-dropdown-content">
-										<div class="qtyButtons">
-											<label>Adults</label>
-											<input type="text" name="qtyInput" value="1">
-										</div>
-										<div class="qtyButtons">
-											<label>Childrens</label>
-											<input type="text" name="qtyInput" value="0">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-2">
-								<input type="submit" class="btn_search" value="Search">
-							</div>
-						</div>
-					</form> -->
-				</div>
-        <div class="container">
-          <form>
-						<div class="row no-gutters custom-search-input-2">
-							<div class="col-lg-4">
-                <model-select class="form-control" :options="options"
-                                       v-model="item"
-                                       placeholder="Hotel">
-                </model-select>
-              </div>
-							<div class="col-lg-3">
-                <Datepicker :clear-button="true" style="width:100%;" placeholder="Date"></Datepicker>
-              </div>
-							<div class="col-lg-3">
-                <input type="text" class="form-control" placeholder="People">
-              </div>
-              <div class="col-lg-2">
-                <input type="submit" class="btn_search" value="Search">
-              </div>
-            </div>
-          </form>
-
-
-
-
-
-        </div>
-			</div>
-		</section>
-		<!-- /hero_single -->
-
     <div class="bg_color_1">
 			<div class="container margin_60_35">
 				<div class="row">
@@ -105,7 +33,7 @@
 
 		<div class="container-fluid pl-lg-5 pr-lg-5">
       <section>
-        <div class="main_title_3">
+        <div class="main_title_2">
           <span><em></em></span>
           <h2>Popular Transportation </h2>
           <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
@@ -143,21 +71,13 @@
 
     </div>
 
-    <!-- AQUI PONEMOS DATOS DE TRIPADVISOR O VIDEOS DE YOUTUBE PARA MOSTRAR-->
-    <div class="container-fluid margin_30_95 pl-lg-5 pr-lg-5">
-			<section>
-        <h2>aqui va los contactos de tripadvisor </h2>
-      </section>
-    </div>
-
-
 		<div class="container-fluid margin_30_95 pl-lg-5 pr-lg-5">
 			<section>
-				<div class="main_title_3">
-					<span><em></em></span>
-					<h2>Popular Tours</h2>
-					<p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
-				</div>
+        <div class="main_title_2">
+          <span><em></em></span>
+          <h2>Popular Transportation </h2>
+          <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+        </div>
 				<div class="row">
 					<div v-for="(place,key) in popularTours" :key="key" class="col-xl-3 col-lg-6 col-md-6">
 						<a href="restaurant-detail.html" class="grid_item">
@@ -176,7 +96,7 @@
 			</section>
 			<!-- /section -->
 		</div>
-		<!-- /container -->
+
 
 	</main>
 
