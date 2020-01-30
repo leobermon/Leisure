@@ -98,181 +98,54 @@
 	<div id="page">
 
 
-	<header class="header menu_fixed">
-		<div id="preloader"><div data-loader="circle-side"></div></div><!-- /Page Preload -->
-		<div id="logo">
-			<a href="index.html">
-				<img src="img/ALT-Nombre.png" width="340" height="120" data-retina="true" alt="" class="logo_normal">
-				<img src="img/ALT-Nombre.png" width="170" height="60" data-retina="true" alt="" class="logo_sticky">
-			</a>
-		</div>
-		<a href="#menu" class="btn_mobile">
-			<div class="hamburger hamburger--spin" id="hamburger">
-				<div class="hamburger-box">
-					<div class="hamburger-inner"></div>
-				</div>
-			</div>
-		</a>
-		<nav id="menu" class="main-menu">
-			<ul>
-
-				<li>
-					<span><a href="/">Home</a></span>
-				</li>
-				<li>
-					<span><a href="/about">About</a></span>
-				</li>
-				<li>
-					<span><a href="/contact">Contact us</a></span>
-				</li>
-				<li>
-					<span><a href=".tours">Tours</a></span>
-				</li>
-
-			</ul>
-		</nav>
-
-	</header>
-	<!-- /header -->
-
 	<main>
-		<section class="hero_single version_2" id="sliderPrincipal" style="display:block;" >
-			<div class="wrapper">
-				<div class="container">
-					<h3>Book your transportation now</h3>
-					<p>Reserve your service transportation </p>
-					<form autocomplete="off">
-            <input style="display:none">
-            <input type="password" style="display:none">
-						<div class="row no-gutters custom-search-input-2">
-							<div class="col-lg-4">
-								<div class="form-group">
-                  <input style="display:none">
-									<input id="myInput" class="form-control" type="text" placeholder="Hotel, City...">
-									<i class="icon_pin_alt"></i>
-								</div>
-							</div>
-							<div class="col-lg-3">
-								<div class="form-group">
-									<input class="form-control" type="text" name="dates" placeholder="When..">
-									<i class="icon_calendar"></i>
-								</div>
-							</div>
-							<div class="col-lg-3">
-								<div class="panel-dropdown">
-									<a href="#">Guests <span class="qtyTotal">1</span></a>
-									<div class="panel-dropdown-content">
-										<!-- Quantity Buttons -->
-										<div class="qtyButtons">
-											<label>Adults</label>
-											<input type="text" name="qtyInput" value="1">
-										</div>
-										<div class="qtyButtons">
-											<label>Childrens</label>
-											<input type="text" name="qtyInput" value="0">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-2">
-								<input type="submit" class="btn_search" value="Book">
-							</div>
-						</div>
-						<!-- /row -->
-					</form>
-				</div>
-			</div>
-		</section>
-		<!-- /hero_single -->
+
+
+    	<header class="header menu_fixed" style="display:none;">
+    		<div id="preloader"><div data-loader="circle-side"></div></div><!-- /Page Preload -->
+    		<div id="logo">
+    			<a href="index.html">
+    				<img src="img/ALT-Nombre.png" width="340" height="120" data-retina="true" alt="" class="logo_normal">
+    				<img src="img/ALT-Nombre.png" width="170" height="60" data-retina="true" alt="" class="logo_sticky">
+    			</a>
+    		</div>
+    		<a href="#menu" class="btn_mobile">
+    			<div class="hamburger hamburger--spin" id="hamburger">
+    				<div class="hamburger-box">
+    					<div class="hamburger-inner"></div>
+    				</div>
+    			</div>
+    		</a>
+    		<nav id="menu" class="main-menu">
+    			<ul>
+
+    				<li>
+    					<span><a href="/">Home</a></span>
+    				</li>
+    				<li>
+    					<span><a href="/about">About</a></span>
+    				</li>
+    				<li>
+    					<span><a href="/contact">Contact us</a></span>
+    				</li>
+    				<li>
+    					<span><a href=".tours">Tours</a></span>
+    				</li>
+
+    			</ul>
+    		</nav>
+
+    	</header>
 
     <div class="container-fluid margin_80_0">
       <div id="app" >
-        <router-view></router-view>
+
       </div>
     </div>
 
 	</main>
 	<!-- /main -->
 
-  <footer>
-    <div class="container margin_60_35">
-      <div class="row">
-        <div class="col-lg-5 col-md-12 p-r-5">
-          <br>
-          <p><img src="img/ALT1-02.png" width="300" height="110" data-retina="true" alt=""></p>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-4 col-4">
-          <h5>Pages</h5>
-          <ul >
-            <li><a href="about.html">About</a></li>
-            <!-- <li><a href="blog.html">News &amp; Events</a></li> -->
-            <li><a href="media-gallery.html">Galery</a></li>
-            <li><a href="contacts.html">Contacts</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-8 col-8">
-          <h5>Contact with Us</h5>
-          <ul class="contacts">
-            <li><a href="tel://61280932400"><i class="ti-mobile"></i> + 61 23 8093 3400</a></li>
-            <li><a href="mailto:info@Panagea.com"><i class="ti-email"></i> info@Panagea.com</a></li>
-            <li>
-              <div class="follow_us">
-                <ul>
-                  <li>Follow us</li> <br>
-                  <li><a href="#0"><i class="ti-facebook"></i></a></li>
-                  <li><a href="#0"><i class="ti-twitter-alt"></i></a></li>
-                  <li><a href="#0"><i class="ti-instagram"></i></a></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        <!-- 	<div id="newsletter">
-          <h6>Newsletter</h6>
-          <div id="message-newsletter"></div>
-          <form method="post" action="assets/newsletter.php" name="newsletter_form" id="newsletter_form">
-            <div class="form-group">
-              <input type="email" name="email_newsletter" id="email_newsletter" class="form-control" placeholder="Your email">
-              <input type="submit" value="Submit" id="submit-newsletter">
-            </div>
-          </form>
-          </div> -->
-        </div>
-      </div>
-      <!--/row-->
-      <hr>
-      <div class="row">
-        <div class="col-lg-6">
-          <ul id="footer-selector">
-            <li>
-              <div class="styled-select" id="lang-selector">
-                <select>
-                  <option value="English" selected>English</option>
-                  <option value="Spanish">Spanish</option>
-                </select>
-              </div>
-            </li>
-            <li>
-              <div class="styled-select" id="currency-selector">
-                <select>
-                  <option value="US Dollars" selected>US Dollars</option>
-                  <!-- <option value="Euro">Euro</option> -->
-                </select>
-              </div>
-            </li>
-            <li><img src="img/cards_all.svg" alt=""></li>
-          </ul>
-        </div>
-        <div class="col-lg-6">
-          <ul id="additional_links">
-            <li><a href="#0">Terms and conditions</a></li>
-            <li><a href="#0">Privacy</a></li>
-            <!-- <li><span>© 2018 Panagea</span></li> -->
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
 	</div>
 	<!-- page -->
 
@@ -285,136 +158,6 @@
     <script src="js/jquery-2.2.4.min.js"></script>
     <script src="js/common_scripts.js"></script>
     <script src="js/main.js"></script>
-
-	<!-- DATEPICKER  -->
-	<script>
-
-	$(function() {
-	  'use strict';
-	  $('input[name="dates"]').daterangepicker({
-		  autoUpdateInput: false,
-		  locale: {
-			  cancelLabel: 'Clear'
-		  }
-	  });
-	  $('input[name="dates"]').on('apply.daterangepicker', function(ev, picker) {
-		  $(this).val(picker.startDate.format('MM-DD-YY') + ' > ' + picker.endDate.format('MM-DD-YY'));
-	  });
-	  $('input[name="dates"]').on('cancel.daterangepicker', function(ev, picker) {
-		  $(this).val('');
-	  });
-
-    $(document).on("click",".elementOnTheList",function() {
-      console.log('presionamos el boton de autocomplete');
-      console.log( $(this).attr('id') )
-    });
-
-    $(":input").attr("autocomplete","off");
-
-    function autocomplete(inp, arr) {
-
-      var currentFocus;
-      inp.addEventListener("input", function(e) {
-          var a, b, i, val = this.value;
-          /*close any already open lists of autocompleted values*/
-          closeAllLists();
-          if (!val) { return false;}
-          currentFocus = -1;
-          a = document.createElement("DIV");
-          a.setAttribute("id", this.id + "autocomplete-list");
-          a.setAttribute("class", "autocomplete-items");
-          this.parentNode.appendChild(a);
-          for (i = 0; i < arr.length; i++) {
-            if (arr[i]['name'].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-              b = document.createElement("DIV");
-              b.setAttribute("class", 'elementOnTheList' );
-              b.setAttribute("id",arr[i]['id'] );
-              b.innerHTML = "<strong>" + arr[i]['name'].substr(0, val.length) + "</strong>";
-              b.innerHTML += arr[i]['name'].substr(val.length);
-              b.innerHTML += "<input type='hidden' id='"+arr[i]['id']+"' value='" + arr[i]['name'] + "'>";
-              b.addEventListener("click", function(e) {
-                  inp.value = this.getElementsByTagName("input")[0].value;
-                  closeAllLists();
-              });
-              a.appendChild(b);
-            }
-          }
-      });
-      /*execute a function presses a key on the keyboard:*/
-      inp.addEventListener("keydown", function(e) {
-          var x = document.getElementById(this.id + "autocomplete-list");
-          if (x) x = x.getElementsByTagName("div");
-          if (e.keyCode == 40) {
-            currentFocus++;
-            addActive(x);
-          } else if (e.keyCode == 38) { //up
-            currentFocus--;
-            addActive(x);
-          } else if (e.keyCode == 13) {
-            e.preventDefault();
-            if (currentFocus > -1) {
-              if (x) x[currentFocus].click();
-            }
-          }
-      });
-      function addActive(x) {
-        if (!x) return false;
-        removeActive(x);
-        if (currentFocus >= x.length) currentFocus = 0;
-        if (currentFocus < 0) currentFocus = (x.length - 1);
-        x[currentFocus].classList.add("autocomplete-active");
-      }
-      function removeActive(x) {
-        for (var i = 0; i < x.length; i++) {
-          x[i].classList.remove("autocomplete-active");
-        }
-      }
-      function closeAllLists(elmnt) {
-        var x = document.getElementsByClassName("autocomplete-items");
-        for (var i = 0; i < x.length; i++) {
-          if (elmnt != x[i] && elmnt != inp) {
-            x[i].parentNode.removeChild(x[i]);
-          }
-        }
-      }
-      document.addEventListener("click", function (e) {
-          closeAllLists(e.target);
-      });
-    }
-
-    /*An array containing all the country names in the world:*/
-    var countries = [
-      {
-        id:1,
-        name: 'PHP'
-      },
-      {
-        id:2,
-        name: 'HTML'
-      },
-      {
-        id:3,
-        name: 'JAVA'
-      },
-      {
-        id:4,
-        name: 'C'
-      },
-      {
-        id:5,
-        name: 'PYTON'
-      },
-      {
-        id:6,
-        name: 'RUBY'
-      }
-    ];
-
-    /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
-    autocomplete(document.getElementById("myInput"), countries);
-
-	});
-	</script>
 
 	<!-- INPUT QUANTITY  -->
 	<script src="js/input_qty.js"></script>

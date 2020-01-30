@@ -1,21 +1,28 @@
 <template>
   <div id="app">
+    <Header/>
     <router-view :key="$route.fullPath" />
+    <Footer/>
   </div>
 </template>
 
 <script>
   // @ is an alias to /src
-
+import Header from './components/Header'
+import Footer from './components/Footer'
 
   export default {
-    data () {
+    components: {
+       Header,
+       Footer
+     },
+     data () {
       return {
         contentIs: this.isNotMainRoute()
       }
     },
     created(){
-  
+
     },
     methods: {
       isNotMainRoute () { // revisamos si esta en el route, index
