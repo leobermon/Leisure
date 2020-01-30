@@ -47,7 +47,7 @@
               <div v-for="(place, key) in popularDestination" :key="key" class="col-xl-4 col-lg-6 col-md-6">
                 <div class="box_grid">
                   <figure>
-                    <a href="tour-detail.html"><img src="img/tour_1.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
+                    <a href="tour-detail.html"><img src="@/assets/img/tour_1.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
                     <small>Historic</small>
                   </figure>
                   <div class="wrapper">
@@ -70,6 +70,7 @@
 
 
     </div>
+
 
 		<div class="container-fluid margin_30_95 pl-lg-5 pr-lg-5">
 			<section>
@@ -95,8 +96,44 @@
 				<a href="restaurants-grid-isotope.html"><strong>View more Tours  <i class="arrow_carrot-right"></i></strong></a>
 			</section>
 			<!-- /section -->
-		</div>
+    </div>
 
+
+    <div class="container-fluid margin_30_95 pl-lg-5 pr-lg-5">
+
+
+      <div class="call_section">
+        <div class="container clearfix">
+          <div class="row">
+            <div class="col-lg-8 col-md-8 float-right wow" data-wow-offset="250">
+              <div class="block-reveal">
+              <div class="block-vertical"></div>
+              <div class="box_1">
+              <h3>Enjoy a GREAT travel with us</h3>
+              <p> Travel with us, is really confortable </p>
+
+              <figure class="block-reveal">
+              <div class="block-horizzontal"></div>
+              <img src="img/about_1.jpg" class="img-fluid" alt="">
+              </figure>
+
+              <a href="pricing-tables.html" class="btn_1 rounded">Read more</a>
+              </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 float-right wow" data-wow-offset="250">
+              <div class="block-reveal">
+            
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+      <!--/call_section-->
+    </div>
 
 	</main>
 

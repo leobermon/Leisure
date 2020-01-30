@@ -19,12 +19,59 @@
     <!-- BASE CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-	<link href="css/vendors.css" rel="stylesheet">
+	  <link href="css/vendors.css" rel="stylesheet">
 
     <!-- YOUR CUSTOM CSS -->
     <link href="css/custom.css" rel="stylesheet">
 
     <style media="screen">
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /*the container must be positioned relative:*/
+    .autocomplete {
+      position: relative;
+      display: inline-block;
+    }
+
+    input[type=submit] {
+      background-color: DodgerBlue;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .autocomplete-items {
+      position: absolute;
+      border: 1px solid #d4d4d4;
+      border-bottom: none;
+      border-top: none;
+      z-index: 99;
+      /*position the autocomplete items to be the same width as the container:*/
+      top: 100%;
+      left: 0;
+      right: 0;
+    }
+
+    .autocomplete-items div {
+      padding: 7px;
+      cursor: pointer;
+      background-color: #fff;
+      border-bottom: 1px solid #d4d4d4;
+      color:#fc5b62;
+    }
+
+    /*when hovering an item:*/
+    .autocomplete-items div:hover {
+      background-color: #e9e9e9;
+    }
+
+    /*when navigating through the items using the arrow keys:*/
+    .autocomplete-active {
+      background-color: DodgerBlue !important;
+      color: #ffffff;
+    }
 
     .margin_60_35 {
         padding-top: 5px !important;
@@ -94,11 +141,14 @@
 				<div class="container">
 					<h3>Book your transportation now</h3>
 					<p>Reserve your service transportation </p>
-					<form>
+					<form autocomplete="off">
+            <input style="display:none">
+            <input type="password" style="display:none">
 						<div class="row no-gutters custom-search-input-2">
 							<div class="col-lg-4">
 								<div class="form-group">
-									<input class="form-control" type="text" placeholder="Hotel, City...">
+                  <input style="display:none">
+									<input id="myInput" class="form-control" type="text" placeholder="Hotel, City...">
 									<i class="icon_pin_alt"></i>
 								</div>
 							</div>
@@ -125,7 +175,7 @@
 								</div>
 							</div>
 							<div class="col-lg-2">
-								<input type="submit" class="btn_search" value="Search">
+								<input type="submit" class="btn_search" value="Book">
 							</div>
 						</div>
 						<!-- /row -->
@@ -141,34 +191,6 @@
       </div>
     </div>
 
-
-
-		<div class="call_section">
-			<div class="container clearfix">
-        <div class="row">
-          <div class="col-lg-8 col-md-8 float-right wow" data-wow-offset="250">
-  					<div class="block-reveal">
-  						<div class="block-vertical"></div>
-  						<div class="box_1">
-  							<h3>Enjoy a GREAT travel with us</h3>
-  							<p> Travel with us, is really confortable </p>
-  							<a href="pricing-tables.html" class="btn_1 rounded">Read more</a>
-  						</div>
-  					</div>
-  				</div>
-          <div class="col-lg-4 col-md-4 float-right wow" data-wow-offset="250">
-            <div class="block-reveal">
-               <div id="TA_selfserveprop313" class="TA_selfserveprop"><ul id="W9hzpYPfZ" class="TA_links D8jf1PlQUA3T"><li id="6tKHoyt" class="vM4bNQclY8"><a target="_blank" href="https://www.tripadvisor.com.mx/"><img src="https://www.tripadvisor.com.mx/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor"/></a></li></ul></div><script async src="https://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=313&amp;locationId=13942240&amp;lang=es_MX&amp;rating=true&amp;nreviews=3&amp;writereviewlink=true&amp;popIdx=true&amp;iswide=false&amp;border=false&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
-
-            </div>
-          </div>
-        </div>
-
-
-
-			</div>
-		</div>
-		<!--/call_section-->
 	</main>
 	<!-- /main -->
 
@@ -178,11 +200,9 @@
         <div class="col-lg-5 col-md-12 p-r-5">
           <br>
           <p><img src="img/ALT1-02.png" width="300" height="110" data-retina="true" alt=""></p>
-
-
         </div>
-        <div class="col-lg-3 col-md-6 ml-lg-auto">
-          <h5>Useful links</h5>
+        <div class="col-lg-3 col-md-6 col-sm-4 col-4">
+          <h5>Pages</h5>
           <ul >
             <li><a href="about.html">About</a></li>
             <!-- <li><a href="blog.html">News &amp; Events</a></li> -->
@@ -191,7 +211,7 @@
             <li><a href="faq.html">FAQ</a></li>
           </ul>
         </div>
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-3 col-md-6 col-sm-8 col-8">
           <h5>Contact with Us</h5>
           <ul class="contacts">
             <li><a href="tel://61280932400"><i class="ti-mobile"></i> + 61 23 8093 3400</a></li>
@@ -228,9 +248,7 @@
               <div class="styled-select" id="lang-selector">
                 <select>
                   <option value="English" selected>English</option>
-              <!-- 		<option value="French">French</option>
                   <option value="Spanish">Spanish</option>
-                  <option value="Russian">Russian</option> -->
                 </select>
               </div>
             </li>
@@ -262,12 +280,15 @@
 	<div id="toTop"></div><!-- Back to top button -->
 
 	<!-- COMMON SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/jquery-2.2.4.min.js"></script>
     <script src="js/common_scripts.js"></script>
     <script src="js/main.js"></script>
 
 	<!-- DATEPICKER  -->
 	<script>
+
 	$(function() {
 	  'use strict';
 	  $('input[name="dates"]').daterangepicker({
@@ -282,6 +303,116 @@
 	  $('input[name="dates"]').on('cancel.daterangepicker', function(ev, picker) {
 		  $(this).val('');
 	  });
+
+    $(document).on("click",".elementOnTheList",function() {
+      console.log('presionamos el boton de autocomplete');
+      console.log( $(this).attr('id') )
+    });
+
+    $(":input").attr("autocomplete","off");
+
+    function autocomplete(inp, arr) {
+
+      var currentFocus;
+      inp.addEventListener("input", function(e) {
+          var a, b, i, val = this.value;
+          /*close any already open lists of autocompleted values*/
+          closeAllLists();
+          if (!val) { return false;}
+          currentFocus = -1;
+          a = document.createElement("DIV");
+          a.setAttribute("id", this.id + "autocomplete-list");
+          a.setAttribute("class", "autocomplete-items");
+          this.parentNode.appendChild(a);
+          for (i = 0; i < arr.length; i++) {
+            if (arr[i]['name'].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+              b = document.createElement("DIV");
+              b.setAttribute("class", 'elementOnTheList' );
+              b.setAttribute("id",arr[i]['id'] );
+              b.innerHTML = "<strong>" + arr[i]['name'].substr(0, val.length) + "</strong>";
+              b.innerHTML += arr[i]['name'].substr(val.length);
+              b.innerHTML += "<input type='hidden' id='"+arr[i]['id']+"' value='" + arr[i]['name'] + "'>";
+              b.addEventListener("click", function(e) {
+                  inp.value = this.getElementsByTagName("input")[0].value;
+                  closeAllLists();
+              });
+              a.appendChild(b);
+            }
+          }
+      });
+      /*execute a function presses a key on the keyboard:*/
+      inp.addEventListener("keydown", function(e) {
+          var x = document.getElementById(this.id + "autocomplete-list");
+          if (x) x = x.getElementsByTagName("div");
+          if (e.keyCode == 40) {
+            currentFocus++;
+            addActive(x);
+          } else if (e.keyCode == 38) { //up
+            currentFocus--;
+            addActive(x);
+          } else if (e.keyCode == 13) {
+            e.preventDefault();
+            if (currentFocus > -1) {
+              if (x) x[currentFocus].click();
+            }
+          }
+      });
+      function addActive(x) {
+        if (!x) return false;
+        removeActive(x);
+        if (currentFocus >= x.length) currentFocus = 0;
+        if (currentFocus < 0) currentFocus = (x.length - 1);
+        x[currentFocus].classList.add("autocomplete-active");
+      }
+      function removeActive(x) {
+        for (var i = 0; i < x.length; i++) {
+          x[i].classList.remove("autocomplete-active");
+        }
+      }
+      function closeAllLists(elmnt) {
+        var x = document.getElementsByClassName("autocomplete-items");
+        for (var i = 0; i < x.length; i++) {
+          if (elmnt != x[i] && elmnt != inp) {
+            x[i].parentNode.removeChild(x[i]);
+          }
+        }
+      }
+      document.addEventListener("click", function (e) {
+          closeAllLists(e.target);
+      });
+    }
+
+    /*An array containing all the country names in the world:*/
+    var countries = [
+      {
+        id:1,
+        name: 'PHP'
+      },
+      {
+        id:2,
+        name: 'HTML'
+      },
+      {
+        id:3,
+        name: 'JAVA'
+      },
+      {
+        id:4,
+        name: 'C'
+      },
+      {
+        id:5,
+        name: 'PYTON'
+      },
+      {
+        id:6,
+        name: 'RUBY'
+      }
+    ];
+
+    /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+    autocomplete(document.getElementById("myInput"), countries);
+
 	});
 	</script>
 
