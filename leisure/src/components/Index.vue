@@ -1,6 +1,16 @@
 <template>
   <div class="hello">
     <main>
+
+      <div style="height:300px; background-color:red; overflow:hidden;">
+        <iframe src="http://localhost:8080/index2.html" style=" top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;">
+            Your browser doesn't support iframes
+        </iframe>
+      </div>
+
+
+
+
     <div class="bg_color_1">
 			<div class="container margin_60_35">
 				<div class="row">
