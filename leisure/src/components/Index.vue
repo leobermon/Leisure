@@ -47,11 +47,11 @@
               <div v-for="(place, key) in popularDestination" :key="key" class="col-xl-4 col-lg-6 col-md-6">
                 <div class="box_grid">
                   <figure>
-                    <a href="tour-detail.html"><img src="@/assets/img/tour_1.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
+                    <a @click="changeRoute('/HotelDetail', place.Id )"><img src="@/assets/img/tour_1.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
                     <small>Historic</small>
                   </figure>
                   <div class="wrapper">
-                    <h3><a href="tour-detail.html"> {{place.Nombre }}</a></h3>
+                    <h3><a  @click="changeRoute('/HotelDetail', place.Id )" > {{place.Nombre }}</a></h3>
                     <p>{{place.Descripcion}}</p>
                     <span class="price">From <strong>${{place.Price}}</strong> /per person</span>
                   </div>
@@ -62,7 +62,7 @@
           </div>
           <!-- /wrapper-grid -->
 
-          <p class="text-center"><a href="#0" class="btn_1 rounded add_top_30">Load more</a></p>
+          <p class="text-center"><a @click="changeRoute('/HotelList', '')" class="btn_1 rounded add_top_30">Load more</a></p>
 
         </div>
         <!-- /container -->
@@ -123,7 +123,7 @@
             </div>
             <div class="col-lg-4 col-md-4 float-right wow" data-wow-offset="250">
               <div class="block-reveal">
-            
+
               </div>
             </div>
           </div>
@@ -212,14 +212,26 @@ export default {
       }]
     }
   },
+  methods:{
+    changeRoute (ruta, id) {
+      // this.$router.push(ruta)
+
+      this.$router.push({
+          path: ruta,
+          params: { Id: id }
+      });
+
+    }
+  },
   mounted() {
+
+    $('#sliderPrincipal').show();
+    $('#headerDesdeIndex').show();
+
 
     let recaptchaScript = document.createElement('script')
     recaptchaScript.setAttribute('src', '@/assets/js/common_scripts.js')
     document.head.appendChild(recaptchaScript)
-  },
-  methods: {
-
   }
 
 }

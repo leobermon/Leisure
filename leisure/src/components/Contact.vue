@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-
+  <Header/>
   <main>
 		<section class="hero_in contacts">
 			<div class="wrapper">
@@ -97,10 +97,22 @@
 </template>
 
 <script>
+import $ from 'jquery'
+import Header from './Header.vue'
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  components: {
+    Header
+  },
+  mounted(){
+
+    $('#sliderPrincipal').hide();
+    $('#headerDesdeIndex').hide();
+
   }
 }
 </script>

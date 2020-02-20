@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
 
-    <header class="header menu_fixed">
+    <header class="header menu_fixed" id="headerMain">
 		<div id="logo">
 			<a href="/">
 				<img src="img/ALT-Nombre.png" width="280" height="90" data-retina="true" alt="" class="logo_normal">
