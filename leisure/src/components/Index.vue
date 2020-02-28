@@ -1,15 +1,77 @@
 <template>
   <div class="hello">
+
     <main>
 
-      <div style="height:300px; background-color:red; overflow:hidden;">
-        <iframe src="http://localhost:8080/index2.html" style=" top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;">
-            Your browser doesn't support iframes
-        </iframe>
-      </div>
+		<section class="hero_single version_2">
+
+			<div class="wrapper">
+				<div class="container">
+					<h3>Book your transportation now</h3>
+					<!-- <form>
+						<div class="row no-gutters custom-search-input-2">
+							<div class="col-lg-4">
+								<div class="form-group">
+									<input class="form-control" type="text" placeholder="Hotel, City...">
+									<i class="icon_pin_alt"></i>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<div class="form-group">
+									<input class="form-control" type="text" name="dates" placeholder="When..">
+									<i class="icon_calendar"></i>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<div class="panel-dropdown">
+									<a href="#">Guests <span class="qtyTotal">1</span></a>
+									<div class="panel-dropdown-content">
+										<div class="qtyButtons">
+											<label>Adults</label>
+											<input type="text" name="qtyInput" value="1">
+										</div>
+										<div class="qtyButtons">
+											<label>Childrens</label>
+											<input type="text" name="qtyInput" value="0">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-2">
+								<input type="submit" class="btn_search" value="Search">
+							</div>
+						</div>
+					</form> -->
+				</div>
+        <div class="container">
+          <form>
+						<div class="row no-gutters custom-search-input-2">
+							<div class="col-lg-4">
+                <model-select class="form-control" :options="options"
+                                       v-model="item"
+                                       placeholder="Hotel">
+                </model-select>
+              </div>
+							<div class="col-lg-3">
+                <Datepicker :clear-button="true" style="width:100%;" placeholder="Date"></Datepicker>
+              </div>
+							<div class="col-lg-3">
+                <input type="text" class="form-control" placeholder="People">
+              </div>
+              <div class="col-lg-2">
+                <input type="submit" class="btn_search" value="Search">
+              </div>
+            </div>
+          </form>
 
 
 
+
+
+        </div>
+			</div>
+		</section>
+		<!-- /hero_single -->
 
     <div class="bg_color_1">
 			<div class="container margin_60_35">
@@ -43,7 +105,7 @@
 
 		<div class="container-fluid pl-lg-5 pr-lg-5">
       <section>
-        <div class="main_title_2">
+        <div class="main_title_3">
           <span><em></em></span>
           <h2>Popular Transportation </h2>
           <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
@@ -57,11 +119,11 @@
               <div v-for="(place, key) in popularDestination" :key="key" class="col-xl-4 col-lg-6 col-md-6">
                 <div class="box_grid">
                   <figure>
-                    <a @click="changeRoute('/HotelDetail', place.Id )"><img src="@/assets/img/tour_1.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
+                    <a @click="openTranspotation(place.Id)" ><img src="img/tour_1.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
                     <small>Historic</small>
                   </figure>
                   <div class="wrapper">
-                    <h3><a  @click="changeRoute('/HotelDetail', place.Id )" > {{place.Nombre }}</a></h3>
+                    <h3><a href="tour-detail.html"> {{place.Nombre }}</a></h3>
                     <p>{{place.Descripcion}}</p>
                     <span class="price">From <strong>${{place.Price}}</strong> /per person</span>
                   </div>
@@ -72,7 +134,7 @@
           </div>
           <!-- /wrapper-grid -->
 
-          <p class="text-center"><a @click="changeRoute('/HotelList', '')" class="btn_1 rounded add_top_30">Load more</a></p>
+          <p class="text-center"><a href="#0" class="btn_1 rounded add_top_30">Load more</a></p>
 
         </div>
         <!-- /container -->
@@ -81,17 +143,24 @@
 
     </div>
 
+    <!-- AQUI PONEMOS DATOS DE TRIPADVISOR O VIDEOS DE YOUTUBE PARA MOSTRAR-->
+    <div class="container-fluid margin_30_95 pl-lg-5 pr-lg-5">
+			<section>
+        <h2>aqui va los contactos de tripadvisor </h2>
+      </section>
+    </div>
+
 
 		<div class="container-fluid margin_30_95 pl-lg-5 pr-lg-5">
 			<section>
-        <div class="main_title_2">
-          <span><em></em></span>
-          <h2>Popular Transportation </h2>
-          <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
-        </div>
+				<div class="main_title_3">
+					<span><em></em></span>
+					<h2>Popular Tours</h2>
+					<p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+				</div>
 				<div class="row">
 					<div v-for="(place,key) in popularTours" :key="key" class="col-xl-3 col-lg-6 col-md-6">
-						<a href="restaurant-detail.html" class="grid_item">
+						<a @click="openTour(place.Id)" class="grid_item">
 							<figure>
 								<img src="img/restaurant_1.jpg" class="img-fluid" alt="">
 								<div class="info">
@@ -106,44 +175,8 @@
 				<a href="restaurants-grid-isotope.html"><strong>View more Tours  <i class="arrow_carrot-right"></i></strong></a>
 			</section>
 			<!-- /section -->
-    </div>
-
-
-    <div class="container-fluid margin_30_95 pl-lg-5 pr-lg-5">
-
-
-      <div class="call_section">
-        <div class="container clearfix">
-          <div class="row">
-            <div class="col-lg-8 col-md-8 float-right wow" data-wow-offset="250">
-              <div class="block-reveal">
-              <div class="block-vertical"></div>
-              <div class="box_1">
-              <h3>Enjoy a GREAT travel with us</h3>
-              <p> Travel with us, is really confortable </p>
-
-              <figure class="block-reveal">
-              <div class="block-horizzontal"></div>
-              <img src="img/about_1.jpg" class="img-fluid" alt="">
-              </figure>
-
-              <a href="pricing-tables.html" class="btn_1 rounded">Read more</a>
-              </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 float-right wow" data-wow-offset="250">
-              <div class="block-reveal">
-
-              </div>
-            </div>
-          </div>
-
-
-
-        </div>
-      </div>
-      <!--/call_section-->
-    </div>
+		</div>
+		<!-- /container -->
 
 	</main>
 
@@ -222,26 +255,24 @@ export default {
       }]
     }
   },
-  methods:{
-    changeRoute (ruta, id) {
-      // this.$router.push(ruta)
-
-      this.$router.push({
-          path: ruta,
-          params: { Id: id }
-      });
-
-    }
-  },
   mounted() {
-
-    $('#sliderPrincipal').show();
-    $('#headerDesdeIndex').show();
-
 
     let recaptchaScript = document.createElement('script')
     recaptchaScript.setAttribute('src', '@/assets/js/common_scripts.js')
     document.head.appendChild(recaptchaScript)
+  },
+  methods: {
+    openTranspotation(id){
+      console.log('abrimos el transportation con id ' + id);
+      this.$router.push({ path: `/Transportation/${id}` }) // -> /user/123
+
+
+    },
+    openTour (id) {
+      console.log('abrimos el tour con id : ' + id);
+      //this.$router.push({ path: 'Tour', params: { id } })
+      this.$router.push({ path: `/Tour/${id}` }) // -> /user/123
+    }
   }
 
 }

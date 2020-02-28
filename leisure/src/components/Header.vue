@@ -1,11 +1,11 @@
 <template>
   <div class="hello">
 
-    <header class="header menu_fixed" id="headerMain">
+    <header class="header menu_fixed">
 		<div id="logo">
 			<a href="/">
-				<img src="img/ALT-Nombre.png" width="280" height="90" data-retina="true" alt="" class="logo_normal">
-				<img src="img/ALT-Nombre.png" width="170" height="60" data-retina="true" alt="" class="logo_sticky">
+				<img src="@/assets/img/ALT-Nombre.png" width="280" height="90" data-retina="true" alt="" class="logo_normal">
+				<img src="@/assets/img/ALT-Nombre.png" width="170" height="60" data-retina="true" alt="" class="logo_sticky">
 			</a>
 		</div>
 		<a href="#menu" class="btn_mobile">

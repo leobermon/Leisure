@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Index from '../components/Index.vue'
-import About from '../components/About.vue'
-import Contact from '../components/Contact.vue'
-import Faq from '../components/Faq.vue'
-import HotelDetail from '../components/HotelDetail.vue'
-import HotelList from '../components/HotelList.vue'
+import Index from '../views/Index.vue'
+import About from '../views/About.vue'
+import Contact from '../views/Contact.vue'
+import Galery from '../views/Galery.vue'
+import Faq from '../views/Faq.vue'
+import Transportation from '../views/Transportation.vue'
+import Tour from '../views/Tour.vue'
 
-
-import notFound from '../components/404.vue'
+import notFound from '../views/404.vue'
 
 
 Vue.use(VueRouter)
@@ -35,14 +35,21 @@ const routes = [
     component: Contact
   },
   {
-    path: '/HotelDetail',
-    name: 'hotelDetail',
-    component: HotelDetail
+    path: '/Galery',
+    name: 'galery',
+    component: Galery
   },
   {
-    path: '/HotelList',
-    name: 'hotelList',
-    component: HotelList
+    path: '/Transportation/:id',
+    name: 'transportation',
+    component: Transportation,
+    props: true
+  },
+  {
+    path: '/Tour/:id',
+    name: 'tour',
+    component: Tour,
+    props: true
   },
   {
     path: '*',
@@ -53,7 +60,10 @@ const routes = [
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
+  scrollBehavior() {
+    document.getElementById('app').scrollIntoView();
+  }
 })
 
 export default router
