@@ -1,12 +1,14 @@
 <template>
-  <div id="app">
-    <router-view :key="$route.fullPath" />
+  <div id="page">
+    <main>
+      <router-view :key="$route.fullPath" />
+    </main>
+
   </div>
 </template>
 
 <script>
-  // @ is an alias to /src
-
+  
   export default {
 
   }

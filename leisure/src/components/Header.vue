@@ -8,31 +8,31 @@
 				<img src="@/assets/img/ALT-Nombre.png" width="170" height="60" data-retina="true" alt="" class="logo_sticky">
 			</a>
 		</div>
-		<a href="#menu" class="btn_mobile">
-			<div class="hamburger hamburger--spin" id="hamburger">
-				<div class="hamburger-box">
-					<div class="hamburger-inner"></div>
-				</div>
-			</div>
-		</a>
-		<nav id="menu" class="main-menu">
-			<ul>
+    <a href="#menu" class="btn_mobile">
+      <div class="hamburger hamburger--spin" id="hamburger">
+        <div class="hamburger-box">
+          <div class="hamburger-inner"></div>
+        </div>
+      </div>
+    </a>
+    <nav id="menu" class="main-menu">
+      <ul>
 
-				<li>
-					<span><a style="cursor: pointer;" @click="changeRoute('/')" >Home</a></span>
-				</li>
-				<li>
-					<span><a style="cursor: pointer;" @click="changeRoute('/About')" >About</a></span>
-				</li>
-				<li>
-					<span><a style="cursor: pointer;" @click="changeRoute('/Contact')" >Contact us</a></span>
-				</li>
-				<li>
-					<span><a style="cursor: pointer;" @click="changeRoute('/Tours')" >Tours</a></span>
-				</li>
+        <li>
+          <span><a href="index.html">Home</a></span>
+        </li>
+        <li>
+          <span><a href="about.html">About</a></span>
+        </li>
+        <li>
+          <span><a href="contacts.html">Contact us</a></span>
+        </li>
+        <li>
+          <span><a href="tours-grid-isotope.html">Tours</a></span>
+        </li>
 
-			</ul>
-		</nav>
+      </ul>
+    </nav>
 
 	</header>
 

@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Index from '../views/Index.vue'
-import About from '../views/About.vue'
-import Contact from '../views/Contact.vue'
-import Galery from '../views/Galery.vue'
-import Faq from '../views/Faq.vue'
-import Transportation from '../views/Transportation.vue'
-import Tour from '../views/Tour.vue'
+import Index from '../components/Index.vue'
+import About from '../components/About.vue'
+import Contact from '../components/Contact.vue'
+import Galery from '../components/Galery.vue'
+import Faq from '../components/Faq.vue'
+import Transportation from '../components/Transportation.vue'
+import Tour from '../components/Tour.vue'
 
-import notFound from '../views/404.vue'
+import notFound from '../components/404.vue'
 
 
 Vue.use(VueRouter)

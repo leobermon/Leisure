@@ -13,9 +13,7 @@
         <div class="col-lg-3 col-md-6 ml-lg-auto">
           <h5>Useful links</h5>
           <ul >
-            <li><a style="cursor:pointer;" @click="changeRoute('About')" >About</a></li>
             <li><a style="cursor:pointer;" @click="changeRoute('Galery')" >Galery</a></li>
-            <li><a style="cursor:pointer;" @click="changeRoute('Contact')" >Contacts</a></li>
             <li><a style="cursor:pointer;" @click="changeRoute('Faq')" >FAQ</a></li>
           </ul>
         </div>
