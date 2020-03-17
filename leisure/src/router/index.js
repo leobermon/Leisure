@@ -6,10 +6,10 @@ import Contact from '../components/Contact.vue'
 import Galery from '../components/Galery.vue'
 import Faq from '../components/Faq.vue'
 import Transportation from '../components/Transportation.vue'
+import Details from '../components/Details.vue'
 import Tour from '../components/Tour.vue'
 
 import notFound from '../components/404.vue'
-
 
 Vue.use(VueRouter)
 
@@ -49,6 +49,12 @@ const routes = [
     path: '/Tour/:id',
     name: 'tour',
     component: Tour,
+    props: true
+  },
+  {
+    path: '/Details/:idOrigin/:idDestination/:nPeople/:nDate',
+    name: 'details',
+    component: Details,
     props: true
   },
   {

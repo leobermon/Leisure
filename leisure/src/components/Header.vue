@@ -19,16 +19,16 @@
       <ul>
 
         <li>
-          <span><a href="index.html">Home</a></span>
+          <span><a href="/index">Home</a></span>
         </li>
         <li>
-          <span><a href="about.html">About</a></span>
+          <span><a href="/about">About</a></span>
         </li>
         <li>
-          <span><a href="contacts.html">Contact us</a></span>
+          <span><a href="/contacts">Contact us</a></span>
         </li>
         <li>
-          <span><a href="tours-grid-isotope.html">Tours</a></span>
+          <span><a href="/tours">Tours</a></span>
         </li>
 
       </ul>
